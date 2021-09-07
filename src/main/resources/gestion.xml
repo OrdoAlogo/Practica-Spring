@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<context:annotation-config/>
+	<context:component-scan base-package="com.curso.practica.spring"></context:component-scan>
+	
+	<bean id="jefe1" class="com.curso.practica.spring.JefeEquipo"></bean>
+	<bean id="prog1" class="com.curso.practica.spring.Programador">
+		<qualifier value="main"></qualifier>
+	</bean>
+	<bean id="prog2" class="com.curso.practica.spring.Programador">
+		<property name="tarea" value="Programar en Java"></property>
+	</bean>
+</beans>
